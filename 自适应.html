@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <title>flex</title>
+    <style type="text/css">
+      *{margin:0;padding: 0;box-sizing: border-box;}
+      .wrap {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-flow: wrap row;
+
+      }
+      
+      .header, .footer{
+        flex:0 1 100%;
+        line-height: 50px;
+        text-align: center;
+        background:#b7efcd;
+      }
+      
+      .main{text-align:left;background:deepskyblue;flex: 1 1 0;padding: 10px;}
+      .aside {flex: 0 1 100px;padding: 10px;}
+      .aside-1{background:gold;flex: 0 1 150px}
+      .aside-2{background:hotpink;}
+      @media all and (max-width:750px){
+        html,body{height: 100%;}
+        .wrap {
+          flex-flow: column nowrap;
+          align-content: space-between;
+          height: 100%;
+          width: 100%;
+        }
+        .header,.footer {
+          flex: 0 1 50px;
+        }
+        .main {
+          width: 100%;
+          flex:1 1 auto;
+          overflow: auto;
+        }
+        .aside {
+          align-self: center;
+          flex: 0 1 auto;
+          width: 100%;
+        }
+        .footer {
+          align-items: flex-end;
+        }
+        
+      }
+      @media all and (min-width:750px){
+      
+      .aside-1{order:1}
+      .main{order:2}
+      .aside-2{order:3}
+      .footer{order:4}
+      }
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">Header</header>
+    <article class="main">
+      <p>今天这次IT内部培训，我们不讲编码技术，也不灌鸡汤要求大家加班。今天我们谈一个你们这群单身狗已经掌握却一直没怎么用的技能：“追求女生”。</p>
+
+<p>1.广泛涉猎恋爱技能，进行自学
+
+交给你一个项目，遇到不会的开发工具怎么办？学啊！我们程序员拥有超强的自学能力。
+
+要充分利用知识管理，我们不会谈恋爱，但是我们可以收集资源自学啊！我们可以看书啊，我们可以听罗辑思维啊！</p>
+<p>2、需求分析要先行，谁是老大、谁是涉众要分清
+
+很多男生遇见喜欢的女神，就羞于表达，也不清楚对方到底喜欢什么。我们程序员也会遇到这样的问题，但是我们有办法。
+
+程序员的需求分析技能是谈恋爱的必杀技。给你一个手机号码，你可以知道她的QQ，微信，微博，然后进行“大数据分析”，朋友圈里面喜欢发什么，微博喜欢转发什么？QQ空间里相册这几年下来都有什么。
+
+用户需求分析就是在这样的过程中逐步搞清楚的。这个过程中你需要搞清楚她身边两类角色：</p>
+<p>3、业务流程要熟练，活动安排要紧跟
+
+程序员做任何事情都会考虑流程和计划，所以在追求女生这件事情上，业务流程的安排直接影响你的约会质量。
+
+了解完女孩子的需求之后，你要制定你的业务流程了。</p>
+<p>4、迭代进行约会，永远不断check女孩的心
+
+在程序员的世界，需求一直是变的。女生的世界也是一样啊。你要是能懂她的一切，我就去吞粪。
+
+所以面对变化莫测的需求，我们应该怎么办？！</p>  
+<p>结语
+
+产品我们讲究女性化思维，谈恋爱更要考虑这一点。
+
+为什么很多人每一件事情都做对了还是会失败？当你准备去追求一个女生的时候，你的包装，你的质量，你的内容，甚至是你所在的应用情景，都是对方会考量的。
+
+作为程序员，我们在研发上已经充分证明了我们的实力。接下里，我希望大家做一次跨界，把这些技能应用到解决自己的单身问题上。
+
+好~今天就讲到这里，大家回去好好想想，有问题，会后直接给我留言，散会。</p>
+    </article>
+    <aside class="aside aside-1">Aside 1</aside>
+    <aside class="aside aside-2">Aside 2</aside>
+    <footer class="footer">Footer</footer>
+  </div>
+
+</body>
+</html>
