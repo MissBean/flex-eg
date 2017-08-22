@@ -15,17 +15,15 @@
       }
        
       .demo .left{
-        /*左边固定宽度，必须设置其最小宽度和最大宽度*/
-        width: 100px;
-        min-width: 100px;
-        max-width: 100px;
+        
+        flex:0 1 150px;
        
         /*高度自由分配*/
         height: auto;
         background: #B4D3F7;
        
-        /*空白区域分配比例为0（作用于项目）*/
-        flex-grow: 0;
+        
+       
       }
        
       .demo .center{
@@ -41,17 +39,12 @@
       }
        
       .demo .right{
-        /*右边固定宽度，必须设置其最小宽度和最大宽度*/
-        width: 150px;
-        min-width: 150px;
-        max-width: 150px;
+        flex: 0 1 150px;
        
         /*高度自由分配*/
         height: auto;
         background: #CBFFD2;
        
-        /*空白区域分配比例为0（作用于项目）*/
-        flex-grow: 0;
       }
     </style>
 </head>
